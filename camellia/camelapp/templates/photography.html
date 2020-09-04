@@ -1,0 +1,142 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+<!--
+	Big Picture by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>♣Camellia Film♣</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'photograph/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'photograph/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<!-- <h1></h1>
+				<nav>
+					<ul>
+
+					</ul>
+				</nav> -->
+			</header>
+
+		<!-- Intro -->
+			<section id="intro" class="main style1 dark fullscreen">
+				<div class="content">
+					<header>
+						<h2>Camellia Film</h2>
+					</header>
+					<p>iPhone과 Canon카메라를 이용하여 최고의 사진을 찍어드립니다<br>아래 버튼을 누르면 사진을 볼 수 있습니다</p>
+					<footer>
+						<a href="#one" class="button style2 down">More</a>
+					</footer>
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main style2 right dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>Landscape</h2>
+					</header>
+					<p>오랫동안 구도와 색을 연구하고<br>수천장의 이미지를 보정한 끝에<br>각 풍격에 맞는 가장 이상적인 느낌과<br>분위기를 주는 사진을 찍을 수 있게 되었습니다. </p>
+				</div>
+				<a href="#two" class="button style2 down anchored">Next</a>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="main style2 left dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>Object</h2>
+					</header>
+					<p>인물이면 인물, 물고기면 물고기<br>
+					각 상황별 객체에 맞춰<br>
+					최고의 사진을 찍어드립니다</p>
+				</div>
+				<a href="#work" class="button style2 down anchored">Next</a>
+			</section>
+
+		<!-- Work -->
+			<section id="work" class="main style3 primary">
+				<div class="content">
+					<header>
+						<h2>My Work</h2>
+						<p>
+                            카멜리아 필름에서 찍은 사진 콘텐츠입니다.<br>
+                            사진을 누르면 크게 볼 수 있습니다.<br>
+                            어쩌면 당신이 흥미로워 하는 사진들이 여기 어딘가에 숨겨져 있을 지도 모릅니다.<br>
+                            카멜리아 필름과 관련된 사진을 확인해보세요.</p>
+					</header>
+
+					<!-- Gallery  -->
+						<div class="gallery">
+							<article class="from-left">
+								<a href="{% static 'photograph/images/풀.jpg' %}" class="image fit"><img src="{% static 'photograph/images/풀.jpg' %}" title="The Anonymous Red" alt="" /></a>
+							</article>
+							<article class="from-right">
+								<a href="{% static 'photograph/images/ncnp.jpg' %}" class="image fit"><img src="{% static 'photograph/images/ncnp.jpg' %}" title="Airchitecture II" alt="" /></a>
+							</article>
+							<article class="from-left">
+								<a href="{% static 'photograph/images/돌산대교.jpg' %}" class="image fit"><img src="{% static 'photograph/images/돌산대교.jpg' %}" title="Air Lounge" alt="" /></a>
+							</article>
+							<article class="from-right">
+								<a href="{% static 'photograph/images/금빛바다.jpg' %}" class="image fit"><img src="{% static 'photograph/images/금빛바다.jpg' %}" title="Carry on" alt="" /></a>
+							</article>
+							<article class="from-left">
+								<a href="{% static 'photograph/images/길거리.jpg' %}" class="image fit"><img src="{% static 'photograph/images/길거리.jpg' %}" title="The sparkling shell" alt="" /></a>
+							</article>
+							<article class="from-right">
+								<a href="{% static 'photograph/images/물고기2.jpg' %}" class="image fit"><img src="{% static 'photograph/images/물고기2.jpg' %}" title="Bent IX" alt="" /></a>
+							</article>
+						</div>
+
+				</div>
+			</section>
+
+		<!-- Contact -->
+			<section id="contact" class="main style3 secondary">
+				<div class="content">
+					<header>
+						<h2>Professional Photography</h2>
+						<p>언제 어디서나 눈이오나 비가오나 고품질의 사진을 찍어드립니다</p>
+					</header>
+					<div class="box">
+						<form method="post" action="#">
+
+                            <ul class="actions special1">
+                                <li><a href="{% url 'signup' %}" class="button wide">회원가입</a></li>
+                                <li><a href="{% url 'signin' %}" class="button wide">로그인</a></li>
+                            </ul>
+
+                            <a><img src="{% static 'photograph/images/해안.png' %}" width=500px title="Airchitecture II" alt="" /></a>
+                            <ul class="actions special1">
+                                <li><a href="{% url 'join' %}" class="button wide primary">함께하기</a></li>
+                            </ul>
+
+						</form>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+
+
+		<!-- Scripts -->
+			<script src="{% static 'photograph/js/jquery.min.js' %}"></script>
+			<script src="{% static 'photograph/js/jquery.poptrox.min.js' %}"></script>
+			<script src="{% static 'photograph/js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'photograph/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'photograph/js/browser.min.js' %}"></script>
+			<script src="{% static 'photograph/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'photograph/js/util.js' %}"></script>
+			<script src="{% static 'photograph/js/main.js' %}"></script>
+
+	</body>
+</html>

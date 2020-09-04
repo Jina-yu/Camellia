@@ -1,0 +1,100 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+<!--
+	Alpha by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>♣Camellia Film♣</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'join/assets/css/main.css' %}" />
+	</head>
+	<body class="landing is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header" class="alt">
+					<h1><a href="{% url 'index' %}">Camellia Film</a> 함께하기</h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="{% url 'index' %}">Home</a></li>
+							<li>
+								<a href="#" class="icon solid fa-angle-down">Menu</a>
+								<ul>
+									<li><a href="{% url 'video' %}">Video</a></li>
+									<li><a href="{% url 'photography' %}">Photography</a></li>
+	
+
+								</ul>
+							</li>
+							<li><a href="{% url 'index' %}" class="{% url 'index' %}">Logout</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Banner -->
+				<section id="banner" class="alt1">
+					<h2>Camellia Film</h2>
+					<p>영상편집 또는 사진 의뢰, 고민상담 게시판입니다<br>본 게시판은 회원이면 누구나 자유롭게 열람할 수 있습니다</p>
+					<ul class="actions special">
+						<li><a href="{% url 'board' %}" class="button primary">목록 가기</a></li>
+						<!-- <li><a href="#" class="button">문의 게시판 이동</a></li> -->
+                    </ul>
+                    
+				</section>
+
+			<!-- Main -->
+				<section id="main" class="container">
+
+					<section class="box special">
+						<header class="major">
+							<h2>제목
+							<br />
+							</h2>
+							<p>글쓴이</p>
+                        </header>
+                        <section class="box">
+                            <h4>Blockquote</h4>
+									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+
+                                <p><h5>날짜</h5></p>
+                                
+
+						<span class="image featured"><img src="{% static 'join/images/풀2.jpg' %}" alt="" /></span>
+					</section>
+
+					
+
+
+
+			
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; CamelliaFilm</li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'join/assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'join/assets/js/jquery.dropotron.min.js' %}"></script>
+			<script src="{% static 'join/assets/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'join/assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'join/assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'join/assets/js/util.js' %}"></script>
+			<script src="{% static 'join/assets/js/main.js' %}"></script>
+
+	</body>
+</html>

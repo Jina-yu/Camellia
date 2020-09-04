@@ -1,0 +1,80 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+<!--
+	Ethereal by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>♣Camellia Film♣</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/main_assets/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets/main_assets/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Wrapper -->
+					<div id="wrapper">
+
+						<!-- Panel (Banner) -->
+							<section class="panel banner right">
+								<div class="content color0 span-3-75">
+									<h1 class="major">Camellia Film<br />
+									사진, 영상 공작소</h1>
+									<p>사진속에는 현실이 있고 이것은 때때로<br>진짜 현실보다 더욱 현실적인 불가사의한 힘을지니고 있다<br><strong>-Alfred Stieglitz(USA, 1864~1946)-</strong></p>
+									<ul class="actions">
+										<li><a href="#first" class="button primary color1 circle icon solid fa-angle-right">Next</a></li>
+									</ul>
+								</div>
+								<div class="image filtered span-1-75" data-position="25% 25%">
+									<img src="{% static 'images/agfa.jpg' %}" alt="" />
+								</div>
+							</section>
+
+						<!-- Panel (Spotlight) -->
+							<section class="panel spotlight medium right" id="first">
+								<div class="content span-7">
+									<h1 class="major">Video Edit</h1>
+                                    <p>Adobe Premiere Pro와 VLLO를 활용하여<br>최고의 영상물을 만들어냅니다<br><br></p>
+                                    <ul class="actions">
+                                        <li><a href="{% url 'video' %}" class="button large">비디오 둘러보기</a></li>
+                                    </ul>
+								</div>
+								<div class="image filtered tinted" data-position="top left">
+									<img src="{% static 'images/videoedit.jpg' %}" alt="" />
+								</div>
+							</section>
+
+
+                            
+                        <!-- Panel (Spotlight) -->
+							<section class="panel spotlight large left">
+								<div class="content span-5">
+									<h1 class="major">Photography</h1>
+                                    <p>Adobe Photoshop, Adobe Lightroom, VSCO를 활용하여<br>최고의 사진 작품을 만들어냅니다<br><strong>기종: Canon, iPhone XS</strong></p>
+                                    <ul class="actions">
+                                        <li><a href="{% url 'photography' %}" class="button primary color2">사진 둘러보기</a></li>
+                                    </ul>
+								</div>
+								<div class="image filtered tinted" data-position="top right">
+									<img src="{% static 'images/photography.jpg' %}" alt="" />
+								</div>
+							</section>
+
+
+
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/main_assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/main_assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'assets/main_assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'assets/main_assets/js/main.js' %}"></script>
+
+	</body>
+</html>

@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+<!--
+	Road Trip by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>♣Camellia Film♣</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'assets/css/signupdone.css' %}" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">Camellia Film<span></span></a></div>
+				<a href="#menu"><span>Menu</span></a>
+			</header>
+
+		<!-- Nav -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="{% url 'index' %}">Camellia Film</a></li>
+				<li><a href="{% url 'video' %}">Video</a></li>
+                <li><a href="{% url 'photography' %}">Photography</a></li>
+                <li><a href="{% url 'join' %}">문의하기</a></li>
+                <li><a href="#">게시판</a></li>
+			</ul>
+		</nav>
+
+		<!-- Banner -->
+		<!--
+			Note: To show a background image, set the "data-bg" attribute below
+			to the full filename of your image. This is used in each section to set
+			the background image.
+		-->
+			<section id="banner" class="bg-img" data-bg="한강.jpg">
+				<div class="inner">
+					<header>
+                        <h1>Welcome New Family</h1>
+                        <h2>카멜리아 필름의 새 가족이 된 것을 환영합니다</h2>
+					</header>
+				</div>
+				<!-- <a href="#one" class="more">Learn More</a> -->
+			</section>
+
+		<!-- One -->
+
+
+
+
+		<!-- Footer -->
+			
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'assets/js/skel.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/signup.js' %}"></script>
+
+	</body>
+</html>

@@ -1,0 +1,140 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+<!--
+	Alpha by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>♣Camellia Film♣</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'join/assets/css/main.css' %}" />
+	</head>
+	<body class="landing is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header" class="alt">
+					<h1><a href="{% url 'index' %}">Camellia Film</a> 함께하기</h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="{% url 'index' %}">Home</a></li>
+							<li>
+								<a href="#" class="icon solid fa-angle-down">Menu</a>
+								<ul>
+									<li><a href="{% url 'video' %}">Video</a></li>
+									<li><a href="{% url 'photography' %}">Photography</a></li>
+	
+
+								</ul>
+							</li>
+							<li><a href="{% url 'index' %}" class="#">Logout</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Banner -->
+				<section id="banner" class="alt1">
+					<h2>Camellia Film</h2>
+					<p>영상편집 또는 사진 의뢰, 고민상담 게시판입니다<br>본 게시판은 회원이면 누구나 자유롭게 열람할 수 있습니다</p>
+					<ul class="actions special">
+						<li><a href="{% url 'join' %}" class="button">글쓰기</a></li>
+						<!-- <li><a href="#" class="button">문의 게시판 이동</a></li> -->
+                    </ul>
+                    
+				</section>
+
+			<!-- Main -->
+				<section id="main" class="container">
+
+					<section class="box special">
+						<header class="major">
+							<h2>Camellia Film과 함께하기
+							<br />
+							</h2>
+							<p>Camellia Film은 철저한 회원제로 운영됩니다<br />
+							고객님의 만족을 위해 언제나 최선을 다하겠습니다</p>
+                        </header>
+                        <section class="box">
+
+                            <div class="table-wrapper">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>번호</th>
+                                            <th>이름</th>
+                                            <th>제목</th>
+                                            <th>날짜</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Something</td>
+                                            <td><a  href="{% url 'contents' %}">Ante turpis integer aliquet porttitor.</a></td>
+                                            <td>29.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Nothing</td>
+                                            <td>Vis ac commodo adipiscing arcu aliquet.</td>
+                                            <td>19.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Something</td>
+                                            <td> Morbi faucibus arcu accumsan lorem.</td>
+                                            <td>29.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Nothing</td>
+                                            <td>Vitae integer tempus condimentum.</td>
+                                            <td>19.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Something</td>
+                                            <td>Ante turpis integer aliquet porttitor.</td>
+                                            <td>29.99</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+						<span class="image featured"><img src="{% static 'join/images/풀2.jpg' %}" alt="" /></span>
+					</section>
+
+					
+
+
+
+			
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; CamelliaFilm</li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'join/assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'join/assets/js/jquery.dropotron.min.js' %}"></script>
+			<script src="{% static 'join/assets/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'join/assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'join/assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'join/assets/js/util.js' %}"></script>
+			<script src="{% static 'join/assets/js/main.js' %}"></script>
+
+	</body>
+</html>

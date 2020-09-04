@@ -1,0 +1,137 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>♣Camellia Film♣</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header" class="alt">
+				<div class="inner">
+					<h1>Camellia Film</h1>
+					<p>프리랜서 유튜브 편집자</p>
+					<p>영상작업물, 사진 기록 보관소 </p>
+				</div>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Banner -->
+					<section id="intro" class="main">
+						<span class="icon fa-diamond major"></span>
+						<h2>영상편집을 의뢰하고 싶으신가요?</h2>
+						<p>크리에이터님의 원활한 영상 편집을 위해<br />
+						최고의 품질, 최고의 영상 콘텐츠를 드리겠습니다<br />
+						저와 함께하고 싶으시다면 아래 회원가입을 눌러주세요</p>
+						<ul class="actions">
+							<li><a href="{% url 'signup' %}" class="button big">회원가입</a></li>
+							<li><a href="{% url 'signin' %}" class="button big">로그인</a></li>
+						</ul>
+					</section>
+
+				<!-- Items -->
+					<section class="main items">
+						<article class="item">
+							<header>
+								<a href="#"><img src="{% static 'images/pic01.png' %}" alt="리디안의원" /></a>
+								<h3><b>지방흡입으로 복근이 생긴다!</b></h3>
+							</header>
+							<p>지방흡입만으로 복근을 만든다고? <br>
+								예술성이 부여된 지방흡입<br>
+								5D지방조각술 홍보영상입니다.<br>
+								압구정 리디안의원에서 제작한 영상으로<br>재미있는 말자막과 모션그래픽이 특징입니다.</p>
+							<ul class="actions">
+								<li><a href="https://youtu.be/ncDggCrOqeE" class="button">영상보기</a></li>
+							</ul>
+						</article>
+						<article class="item">
+							<header>
+								<a href="#"><img src="{% static 'images/pic02.png' %}" alt="다담카" /></a>
+								<h3>어서와 이런 포르쉐는 처음이지?</h3>
+							</header>
+							<p>
+								클래식한은 멋은 유지한 채로<br>
+								내부에 최첨단 옵션을 가득 채운<br>
+								"2020포르쉐 911 카레라 4S (992)<br>
+								다담카와 함께한 차량 리뷰 영상으로<br>
+								상세한 설명, 예능감 있는 자막이 특징입니다</p>
+							<ul class="actions">
+								<li><a href="https://youtu.be/QjlyLrtRE9c" class="button">영상보기</a></li>
+							</ul>
+						</article>
+						<article class="item">
+							<header>
+								<a href="#"><img src="{% static 'images/pic03.png' %}" alt="디어브라이드" /></a>
+								<h3>스윗소로우 좋겠다 (남녀듀엣)</h3>
+							</header>
+							<p>뮤지컬 웨딩 음악영상입니다<br>
+								스윗소로우의 좋겠다<br>
+								남녀 듀엣 버전으로<br>
+								결혼식에서 많이 불리는 축가입니다<br>
+								고급진 영상 분위기, 보케 효과, 가사자막이 특징입니다
+							</p>
+							<ul class="actions">
+								<li><a href="https://youtu.be/YxHIf1e2EJo" class="button">영상보기</a></li>
+							</ul>
+						</article>
+						<article class="item">
+							<header>
+								<a href="#"><img src="{% static 'images/pic04.png' %}" alt="피그부부" /></a>
+								<h3>꿀멍이네 가족이 여름휴가를 보내는 방법</h3>
+							</header>
+							<p>코로나를 피한 본격 여름휴가<br>
+								바로바로 옥캉스!<br>
+								피그부부와 함께 제작한 영상으로<br>
+								육아 전문 VLOG입니다<br>
+								의성어, 의태어를 사용한 자막이 특징입니다</p>
+							<ul class="actions">
+								<li><a href="https://youtu.be/WLUQxty-nI4" class="button">영상보기</a></li>
+							</ul>
+						</article>
+					</section>
+
+				<!-- CTA -->
+					<section id="cta" class="main special">
+						<h2>유튜브 편집은 Camellia Film과 함께하세요</h2>
+						<p>컷편집부터 후반 작업까지<br />
+						여러분들이 원하는 유튭각 제대로 뽑아드립니다!<br />
+						함께하기를 원하시면 아래 버튼을 클릭해주세요</p>
+						<ul class="actions">
+							<li><a href="{%url 'join' %}" class="button big">Get Started</a></li>
+						</ul>
+					</section>
+
+				<!-- Main -->
+
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="http://www.instagram.com/hyupsung_film" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Camellia film</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/skel.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+
+
+
+
+	</body>
+</html>
+
