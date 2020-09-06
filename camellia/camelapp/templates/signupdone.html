@@ -26,9 +26,10 @@
 			<ul class="links">
 				<li><a href="{% url 'index' %}">Camellia Film</a></li>
 				<li><a href="{% url 'video' %}">Video</a></li>
-                <li><a href="{% url 'photography' %}">Photography</a></li>
+				<li><a href="{% url 'photography' %}">Photography</a></li>
+				<li><a href="{% url 'mypage request.user.pk' %}">MyPage</a></li>
                 <li><a href="{% url 'join' %}">문의하기</a></li>
-                <li><a href="#">게시판</a></li>
+                <li><a href="{% url 'board' %}">게시판</a></li>
 			</ul>
 		</nav>
 

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V9</title>
+	<title>♣Camellia Film♣</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -30,17 +30,20 @@
 <!--===============================================================================================-->
 </head>
 <body>
-	
+
+
 	
 	<div class="container-login100" style="background-image: url('static/images/노을2.jpg');">
 		<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
-			<form class="login100-form validate-form">
+			<form class="login100-form validate-form" method="post">
+				{% csrf_token %}
+				{{ error }}
 				<span class="login100-form-title p-b-37">
 					로그인
 				</span>
 
 				<div class="wrap-input100 validate-input m-b-20" data-validate="이름을 입력하세요">
-					<input class="input100" type="text" name="username" placeholder="이름">
+					<input class="input100" type="text" name="name" placeholder="이름">
 					<span class="focus-input100"></span>
 				</div>
 
@@ -48,12 +51,19 @@
 					<input class="input100" type="password" name="password" placeholder="비밀번호">
 					<span class="focus-input100"></span>
 				</div>
-
+				{% if request.user.is_authenticated %}
 				<div class="container-login100-form-btn">
-					<button class="login100-form-btn" href="{% url 'mypage' %}">
+					<button class="login100-form-btn" href="{% url 'mypage' request.user.pk %}">
 						<h5>입장</h5>
 					</button>
 				</div>
+				{% else %}
+				<div class="container-login100-form-btn">
+					<button class="login100-form-btn" href="{% url 'index' %}">
+						<h5>입장</h5>
+					</button>
+				</div>
+				{% endif %}
 
 				<div class="text-center p-t-57 p-b-20">
 					<span class="txt1">

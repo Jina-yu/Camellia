@@ -1,5 +1,6 @@
 {% load static %}
 
+
 <!DOCTYPE HTML>
 <!--
 	Alpha by HTML5 UP
@@ -27,11 +28,18 @@
 								<ul>
 									<li><a href="{% url 'video' %}">Video</a></li>
 									<li><a href="{% url 'photography' %}">Photography</a></li>
+									{% if request.user.is_authenticated %}
+									<li><a href="{% url 'mypage' request.user.pk %}">MyPage</a></li>
+									{% endif %}
 	
 
 								</ul>
 							</li>
-							<li><a href="{% url 'index' %}" class="{% url 'index' %}">Logout</a></li>
+							{% if request.user.is_authenticated %}
+							<li><a href="{% url 'logout' %}" class="#}">Logout</a></li>
+							{% else %}
+							<li><a href="{% url 'signin' %}" class="#}">Login</a></li>
+							{% endif %}>
 						</ul>
 					</nav>
 				</header>
@@ -51,18 +59,28 @@
 				<section id="main" class="container">
 
 					<section class="box special">
+						<form method="post" action="{% url 'delete_content' %}" name="content_id">
+						{% csrf_token %}
 						<header class="major">
-							<h2>제목
+							{% for create in content %}
+							<input name='content_id' type='hidden' value="{{ create.id }}">
+							<h2>{{ create.title }}
 							<br />
 							</h2>
-							<p>글쓴이</p>
+							<p>{{ create.user }}</p>
                         </header>
                         <section class="box">
-                            <h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+							<h4>문의 종류: {{ create.type }}<br></h4>
+							<br>
+									<blockquote><pre>{{ create.content }}</pre></blockquote>
 
-                                <p><h5>날짜</h5></p>
-                                
+								<p><h5>{{ create.upload }}</h5></p>
+
+								{% if request.user == create.user %}
+								<a class="button" type="submit">삭제하기</a>
+								{% endif %}
+								{% endfor %}
+						</form>
 
 						<span class="image featured"><img src="{% static 'join/images/풀2.jpg' %}" alt="" /></span>
 					</section>
@@ -76,7 +94,7 @@
 			<!-- Footer -->
 				<footer id="footer">
 					<ul class="icons">
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="http:www.instagram.com/hyupsung_film" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
 						<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
 					</ul>

@@ -111,8 +111,13 @@
 						<form method="post" action="#">
 
                             <ul class="actions special1">
+								{% if request.user.is_authenticated %}
+                                <li><a href="{% url 'mypage' request.user.pk %}" class="button wide">마이페이지</a></li>
+								<li><a href="{% url 'logout' %}" class="button wide">로그아웃</a></li>
+								{% else %}
                                 <li><a href="{% url 'signup' %}" class="button wide">회원가입</a></li>
-                                <li><a href="{% url 'signin' %}" class="button wide">로그인</a></li>
+								<li><a href="{% url 'signin' %}" class="button wide">로그인</a></li>
+								{% endif %}
                             </ul>
 
                             <a><img src="{% static 'photograph/images/해안.png' %}" width=500px title="Airchitecture II" alt="" /></a>

@@ -10,6 +10,9 @@ urlpatterns = [
     path('join.html', views.join, name='join'),
     path('signupdone.html', views.signupdone, name='signupdone'),
     path('board.html', views.board, name='board'),
-    path('contents.html', views.contents, name='contents'),
-    path('mypage.html', views.mypage, name='mypage'),
+    path('contents.html/<int:pk>', views.contents, name='contents'),
+    path('mypage.html/<int:pk>', views.mypage, name='mypage'),
+    path('logout/', views.logout, name = 'logout'),
+    path('create/<int:pk>', views.create, name = 'create'),
+    path('delete_content/', views.delete_content, name= 'delete_content'),
 ]

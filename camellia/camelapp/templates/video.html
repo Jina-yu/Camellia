@@ -31,8 +31,13 @@
 						최고의 품질, 최고의 영상 콘텐츠를 드리겠습니다<br />
 						저와 함께하고 싶으시다면 아래 회원가입을 눌러주세요</p>
 						<ul class="actions">
+							{% if request.user.is_authenticated %}
+							<li><a href="{% url 'mypage' request.user.pk %}" class="button big">마이페이지</a></li>
+							<li><a href="{% url 'logout' %}" class="button big">로그아웃</a></li>
+							{% else %}
 							<li><a href="{% url 'signup' %}" class="button big">회원가입</a></li>
 							<li><a href="{% url 'signin' %}" class="button big">로그인</a></li>
+							{% endif %}
 						</ul>
 					</section>
 

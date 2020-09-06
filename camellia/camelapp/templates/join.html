@@ -28,11 +28,18 @@
 								<ul>
 									<li><a href="{% url 'video' %}">Video</a></li>
 									<li><a href="{% url 'photography' %}">Photography</a></li>
+									{% if request.user.is_authenticated %}
+									<li><a href="{% url 'mypage' request.user.pk %}">MyPage</a></li>
+									{% endif %}
 	
 
 								</ul>
 							</li>
-							<li><a href="{% url 'index' %}" class="#}">Logout</a></li>
+							{% if request.user.is_authenticated %}
+							<li><a href="{% url 'logout' %}" class="#}">Logout</a></li>
+							{% else %}
+							<li><a href="{% url 'signin' %}" class="#}">Login</a></li>
+							{% endif %}
 						</ul>
 					</nav>
 				</header>
@@ -42,8 +49,13 @@
 					<h2>Camellia Film</h2>
 					<p>영상편집 또는 사진 의뢰를 하고 싶은 분은 신청서를 작성해주세요</p>
 					<ul class="actions special">
+						{% if request.user.is_authenticated %}
 						<li><a href="{% url 'board' %}" class="button primary">문의 게시판 이동</a></li>
 						<!-- <li><a href="#" class="button">문의 게시판 이동</a></li> -->
+						{% else %}
+						<li><a href="{% url 'signup' %}" class="button">회원가입</a></li>
+						<li><a href="{% url 'signin' %}" class="button">로그인</a></li>
+						{% endif %}
                     </ul>
                     
 				</section>
@@ -58,21 +70,23 @@
 							</h2>
 							<p>Camellia Film은 철저한 회원제로 운영됩니다<br />
 							고객님의 만족을 위해 언제나 최선을 다하겠습니다</p>
-                        </header>
+						</header>
+						{% if request.user.is_authenticated %}
                         <div class="box">
-                            <form method="post" action="#">
+                            <form method="post" action="{% url 'create' request.user.pk %}">
+								{% csrf_token %}
                                 <div class="row gtr-50 gtr-uniform">
                                     <div class="col-6 col-12-mobilep">
-                                        <input type="text" name="name" id="name" value="" placeholder="문의 종류(사진/영상/고민상담/기타)" />
+                                        <input type="text" name="type" id="type" value="" placeholder="문의 종류(사진/영상/고민상담/기타)" />
                                     </div>
                                     <div class="col-6 col-12-mobilep">
-                                        <input type="email" name="email" id="email" value="" placeholder="Email" />
+                                        <input type="text" name="call" id="call" value="" placeholder="연락처(이메일/전화번호/인스타아이디)" />
                                     </div>
                                     <div class="col-12">
-                                        <input type="text" name="subject" id="subject" value="" placeholder="제목을 입력해주세요" />
+                                        <input type="text" name="title" id="title" value="" placeholder="제목을 입력해주세요" />
                                     </div>
                                     <div class="col-12">
-                                        <textarea name="message" id="message" placeholder="문의할 내용을 입력해주세요" rows="6"></textarea>
+                                        <textarea name="content" id="content" placeholder="문의할 내용을 입력해주세요" rows="6"></textarea>
                                     </div>
                                     <div class="col-12">
                                         <ul class="actions special">
@@ -81,7 +95,10 @@
                                     </div>
                                 </div>
                             </form>
-                        </div>
+						</div>
+						{% else %}
+						<a><h1>로그인이 필요합니다</h1></a>
+						{% endif %}
 						<span class="image featured"><img src="{% static 'join/images/풀2.jpg' %}" alt="" /></span>
 					</section>
 
@@ -94,7 +111,7 @@
 			<!-- Footer -->
 				<footer id="footer">
 					<ul class="icons">
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="http:www.instagram.com/hyupsung_film" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
 						<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
 					</ul>

@@ -26,9 +26,9 @@
 			<ul class="links">
 				<li><a href="{% url 'index' %}">Camellia Film</a></li>
 				<li><a href="{% url 'video' %}">Video</a></li>
-                <li><a href="{% url 'photography' %}">Photography</a></li>
+				<li><a href="{% url 'photography' %}">Photography</a></li>
                 <li><a href="{% url 'join' %}">문의하기</a></li>
-                <li><a href="#">게시판</a></li>
+                <li><a href="{% url 'board' %}">게시판</a></li>
 			</ul>
 		</nav>
 
@@ -55,25 +55,27 @@
 							<h2>회원가입</h2>
 							<p>새 식구가 되기 위한 기본 정보를 입력해주세요</p>
 						</header>
+					<form action="{% url 'signup' %}" method="post">
+						
+						{% csrf_token %}
 						<div class="content">
 							<p>					
-								<form action="#" method="post">
-
+	
 								<div class="field half first">
 									<label for="name">이름</label>
 									<input name="name" id="name" type="text" placeholder="이름">
 								</div>
 								<div class="field half">
-									<label for="email">Email</label>
-									<input name="email" id="email" type="email" placeholder="camelliapicture0@gmail.com">
+									<label for="address">Email</label>
+									<input name="address" id="address" type="email" placeholder="camelliapicture0@gmail.com">
 								</div>
 								<div class="field half first">
 									<label for="password">비밀번호</label>
 									<input name="password" id="password" type="password" placeholder="비밀번호">
 								</div>
 								<div class="field half">
-									<label for="birthday">생년월일</label>
-									<input name="birthday" id="birthday" type="text" placeholder="0000년 0월 0일">
+									<label for="birth">생년월일</label>
+									<input name="birth" id="birth" type="date">
 								</div>
 								<div class="field">
 									<label for="message">하고 싶은 말</label>
@@ -81,12 +83,13 @@
 								</div>
 
 								</ul>
-								</form>
+								
 							</p>
 						</div>
 						<footer>
-							<a href="{% url 'signupdone' %}" class="button alt" type="submit">새 식구 되기</a>
+							<a href="#"><input type="submit" value="새 가족 되기" class="button alt"></a>
 						</footer>
+					</form>
 					</article>
 				</div>
 
